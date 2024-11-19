@@ -10,7 +10,9 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "install"]
+RUN npm run build
+
+CMD ["npx", "serve", "build", "-l", "3000"]
 
 
 
